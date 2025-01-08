@@ -3,3 +3,18 @@ build and deploy your react apps
 deployed using github and netlify
 - made a local git repo, then pushed to a new empty github repo
 - used app.netlify.com to deploy our app by connecting the github repository
+
+deployed on github pages
+package.json required some changes
+- "homepage": "https://Star-boost.github.io/react_deploy_gh",
+-   "scripts": {
+    "predeploy": "npm run build",  // ADDED
+    "deploy": "gh-pages -d build",  // ADDED
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+-   "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
